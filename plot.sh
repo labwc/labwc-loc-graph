@@ -35,7 +35,7 @@ EOF
 printf '%b\n' "set output \"$loc_graph\"" >>"$gnuplot_commands"
 printf '%b\n' "plot \"$loc_file\" using 2:5 w p ls 1 ,\\" >>"$gnuplot_commands"
 printf '%b\n' "              \"\" using 2:6 w p ls 2 ,\\" >>"$gnuplot_commands"
-printf '%b\n' "              \"\" using 2:6:7 with labels font \"sans,10\" right offset -0.5,0.5 ls 1" >>"$gnuplot_commands"
+printf '%b\n' "              \"\" using 2:6:7 with labels font \"sans,8\" right offset -0.5,0.5 ls 1" >>"$gnuplot_commands"
 
 trap "rm -f ${gnuplot_commands}" EXIT
 
