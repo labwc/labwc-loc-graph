@@ -10,7 +10,7 @@ type git >/dev/null 2>&1 || { printf 'fatal: need git\n'; exit 1; }
 [ "$#" != 1 ] &&  { printf 'usage: count <commit-to-stop-at>\n'; exit 1; }
 
 tmpfile=$(mktemp)
-git checkout master 2>/dev/null
+git checkout master >/dev/null
 git log --format="format:%H" "$1"..HEAD > "${tmpfile}"
 
 while IFS= read -r line || [ -n "$line" ]; do
@@ -20,5 +20,5 @@ while IFS= read -r line || [ -n "$line" ]; do
 	cloc src/ | grep '^C ' | awk '{ print $5 }'
 done < "${tmpfile}"
 
-git checkout master 2>/dev/null
+git checkout master >/dev/null
 rm -rf "${tmpfile}"
