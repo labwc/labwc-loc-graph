@@ -16,5 +16,6 @@ mv tmp.txt ../data.txt
 cd ..
 
 ./plot.sh
+./plot-zoomed-in.sh
 
-imv graph.png
+imv graph-zoomed-in.png
