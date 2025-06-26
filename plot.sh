@@ -18,8 +18,8 @@ set xtics rotate by -45
 set style line 1 lc rgb '#0066aa' pt 0 ps 1 lt 0 lw 0
 set style line 2 lc rgb '#ff0000' pt 7 ps 1 lt 0 lw 0
 
-set xrange ["2020-05-01":"2025-12-31"]
-set yrange ["0":"30000"]
+set xrange ["2020-05-01":"2026-12-31"]
+set yrange ["0":"35000"]
 
 unset key
 
